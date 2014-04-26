@@ -123,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="b76-ie-Wos"/>
                     <connections>
+                        <outlet property="textView" destination="SN3-Po-G3I" id="Afz-Op-Enl"/>
                         <segue destination="pQg-5A-FUj" kind="push" identifier="multiplayer" id="xAW-iC-BoI"/>
                     </connections>
                 </viewController>

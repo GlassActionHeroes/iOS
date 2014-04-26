@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EnterUsernameViewController : UIViewController
+@interface EnterUsernameViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, retain) IBOutlet UITextField *textView;
 
 -(IBAction)nextButtonPressed:(id)sender;
 

@@ -7,12 +7,15 @@
 //
 
 #import "EnterUsernameViewController.h"
+#import "AppDelegate.h"
 
 @interface EnterUsernameViewController ()
 
 @end
 
 @implementation EnterUsernameViewController
+
+@synthesize textView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,10 +26,16 @@
     return self;
 }
 
+- (AppDelegate *)appDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [textView setPlaceholder:@"Username"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +46,14 @@
 
 -(IBAction)nextButtonPressed:(id)sender
 {
+    [self appDelegate].name = textView.text;
     [self performSegueWithIdentifier:@"multiplayer" sender:self];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

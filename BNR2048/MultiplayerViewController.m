@@ -7,6 +7,7 @@
 //
 
 #import "MultiplayerViewController.h"
+#import "AppDelegate.h"
 
 @interface MultiplayerViewController ()
 
@@ -31,6 +32,10 @@
         // Custom initialization
     }
     return self;
+}
+
+- (AppDelegate *)appDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)viewDidLoad
@@ -80,6 +85,8 @@
     [privateChannel bindToEventNamed:@"send_direction" handleWithBlock:^(PTPusherEvent *channelEvent) {
         NSLog(@"received event send_direction: %@", channelEvent);
     }];
+    
+    NSLog(@"Username: %@", [self appDelegate].name);
 }
 
 -(void)didReceiveChannelEventNotification
@@ -95,7 +102,7 @@
 
 -(void)handleSwipeUp
 {
-    NSString *jsonString = @"{\"direction\":\"up\",\"name\":\"sean farrell\"}";
+    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"up\",\"name\":\"%@\"}", [self appDelegate].name];
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -118,7 +125,7 @@
 
 -(void)handleSwipeDown
 {
-    NSString *jsonString = @"{\"direction\":\"down\",\"name\":\"sean farrell\"}";
+    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"down\",\"name\":\"%@\"}", [self appDelegate].name];
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -141,7 +148,7 @@
 
 -(void)handleSwipeLeft
 {
-    NSString *jsonString = @"{\"direction\":\"left\",\"name\":\"sean farrell\"}";
+    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"left\",\"name\":\"%@\"}", [self appDelegate].name];
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -164,7 +171,7 @@
 
 -(void)handleSwipeRight
 {
-    NSString *jsonString = @"{\"direction\":\"right\",\"name\":\"sean farrell\"}";
+    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"right\",\"name\":\"%@\"}", [self appDelegate].name];
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
