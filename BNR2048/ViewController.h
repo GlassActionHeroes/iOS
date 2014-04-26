@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+}
+
+
+-(IBAction)singlePlayerButtonPressed:(id)sender;
+-(IBAction)multiplayerButtonPressed:(id)sender;
 
 @end

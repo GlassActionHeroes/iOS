@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MultiplayerViewController.h"
+#import "F3HNumberTileGameViewController.h"
+
 
 @interface ViewController ()
 
@@ -14,16 +17,30 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)singlePlayerButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"nativeSinglePlayer" sender:self];
+    
+    /*F3HNumberTileGameViewController *c = [F3HNumberTileGameViewController numberTileGameWithDimension:4
+                                                                                         winThreshold:2048
+                                                                                      backgroundColor:[UIColor whiteColor]
+                                                                                          scoreModule:YES
+                                                                                       buttonControls:YES
+                                                                                        swipeControls:YES];
+    [self.navigationController presentViewController:c animated:YES completion:nil];*/
+}
+
+- (void)multiplayerButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"enterUsername" sender:self];
 }
 
 @end
