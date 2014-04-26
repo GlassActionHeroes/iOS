@@ -36,9 +36,6 @@
     tile.numberLabel.textColor = tile.defaultNumberColor;
     tile.value = value;
     tile.layer.cornerRadius = cornerRadius;
-
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"paul_firing_laser" withExtension:@"gif"];
-    tile.imageView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
     
     return tile;
 }
@@ -76,7 +73,7 @@
         self.backgroundColor = [delegate tileColorForValue:self.tileValue];
         self.numberLabel.textColor = [delegate numberColorForValue:self.tileValue];
         self.numberLabel.font = [delegate fontForNumbers];
-        //self.imageView = [delegate imageFromNumbers];
+        self.imageView.image = [delegate imageFromValue:self.tileValue];
     }
 }
 
@@ -86,7 +83,7 @@
     if (self.delegate) {
         self.backgroundColor = [self.delegate tileColorForValue:tileValue];
         self.numberLabel.textColor = [self.delegate numberColorForValue:tileValue];
-        //self.imageView = [self.delegate imageFromNumbers];
+        self.imageView.image = [self.delegate imageFromValue:tileValue];
     }
     self.value = tileValue;
     

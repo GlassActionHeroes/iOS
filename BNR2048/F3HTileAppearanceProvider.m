@@ -61,15 +61,15 @@
             animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
             return animatedImage;
         case 4:
-            url = [[NSBundle mainBundle] URLForResource:@"action_jackson" withExtension:@"gif"];
+            url = [[NSBundle mainBundle] URLForResource:@"sage_galvin" withExtension:@"gif"];
             animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
             return animatedImage;
         case 8:
-            url = [[NSBundle mainBundle] URLForResource:@"spinning_sean" withExtension:@"gif"];
+            url = [[NSBundle mainBundle] URLForResource:@"sunshine_stacy" withExtension:@"gif"];
             animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
             return animatedImage;
         case 16:
-            url = [[NSBundle mainBundle] URLForResource:@"sage_galvin" withExtension:@"gif"];
+            url = [[NSBundle mainBundle] URLForResource:@"action_jackson" withExtension:@"gif"];
             animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
             return animatedImage;
         case 32:
@@ -77,15 +77,15 @@
             animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
             return animatedImage;
         case 64:
-            return [UIImage imageNamed:@"jason-russell.jpg"];
+            url = [[NSBundle mainBundle] URLForResource:@"spinning_sean" withExtension:@"gif"];
+            animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
+            return animatedImage;
         case 128:
             return [UIImage imageNamed:@"chris-stewart.jpg"];
         case 256:
             return [UIImage imageNamed:@"adam-premble.jpg"];
         case 512:
-            url = [[NSBundle mainBundle] URLForResource:@"sunshine_stacy" withExtension:@"gif"];
-            animatedImage = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
-            return animatedImage;
+            return [UIImage imageNamed:@"jason-russell.jpg"];
         case 1024:
             return [UIImage imageNamed:@"aaron-hillegass.jpg"];
         case 2048:

@@ -40,7 +40,7 @@
 }
 
 - (void)multiplayerButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"enterUsername" sender:self];
+    [self performSegueWithIdentifier:@"multiplayer" sender:self];
 }
 
 @end

@@ -102,7 +102,7 @@
 
 -(void)handleSwipeUp
 {
-    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"up\",\"name\":\"%@\"}", [self appDelegate].name];
+    NSString *jsonString = @"{\"direction\":\"up\",\"name\":\"iOS\"}";
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -125,7 +125,7 @@
 
 -(void)handleSwipeDown
 {
-    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"down\",\"name\":\"%@\"}", [self appDelegate].name];
+    NSString *jsonString = @"{\"direction\":\"down\",\"name\":\"iOS\"}";
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -148,7 +148,7 @@
 
 -(void)handleSwipeLeft
 {
-    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"left\",\"name\":\"%@\"}", [self appDelegate].name];
+    NSString *jsonString = @"{\"direction\":\"left\",\"name\":\"iOS\"}";
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     
@@ -171,7 +171,7 @@
 
 -(void)handleSwipeRight
 {
-    NSString *jsonString = [NSString stringWithFormat:@"{\"direction\":\"right\",\"name\":\"%@\"}", [self appDelegate].name];
+    NSString *jsonString = @"{\"direction\":\"right\",\"name\":\"iOS\"}";
     
     [privateChannel triggerEventNamed:@"send_direction" data:jsonString];
     

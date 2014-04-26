@@ -54,7 +54,7 @@
                                 <rect key="frame" x="90" y="288" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Multiplayer">
+                                <state key="normal" title="Collaborative">
                                     <color key="titleColor" red="0.90588241820000004" green="0.7019608021" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,61 +75,11 @@
                     <navigationItem key="navigationItem" id="aZa-Lu-0qK"/>
                     <connections>
                         <segue destination="4M2-O2-G05" kind="push" identifier="nativeSinglePlayer" id="dNY-yc-mCa"/>
-                        <segue destination="IlJ-sx-axM" kind="push" identifier="enterUsername" id="eUt-01-jtJ"/>
+                        <segue destination="pQg-5A-FUj" kind="push" identifier="multiplayer" id="cbm-LU-ARz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Enter Username View Controller-->
-        <scene sceneID="EcU-28-HW6">
-            <objects>
-                <viewController id="IlJ-sx-axM" customClass="EnterUsernameViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Vi-Yd-zt5"/>
-                        <viewControllerLayoutGuide type="bottom" id="SeK-21-o0o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lqG-Ub-l3r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter username." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mec-sd-aqa">
-                                <rect key="frame" x="20" y="87" width="280" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" red="0.90588241820000004" green="0.7019608021" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-Po-G3I">
-                                <rect key="frame" x="20" y="133" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CM-J5-Grs">
-                                <rect key="frame" x="114" y="171" width="92" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.90588241820000004" green="0.7019608021" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="IlJ-sx-axM" eventType="touchUpInside" id="u5t-8M-OqG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40314094389999999" green="0.34741541120000002" blue="0.13072635360000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="b76-ie-Wos"/>
-                    <connections>
-                        <outlet property="textView" destination="SN3-Po-G3I" id="Afz-Op-Enl"/>
-                        <segue destination="pQg-5A-FUj" kind="push" identifier="multiplayer" id="xAW-iC-BoI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NdK-rx-yCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="678" y="411"/>
         </scene>
         <!--Multiplayer View Controller-->
         <scene sceneID="EUp-me-u23">
@@ -162,7 +112,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmk-kE-7pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="siA-j0-XC5"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="411"/>
+            <point key="canvasLocation" x="678" y="368"/>
         </scene>
         <!--Number Tile Game View Controller-->
         <scene sceneID="OxE-Gy-ngo">
